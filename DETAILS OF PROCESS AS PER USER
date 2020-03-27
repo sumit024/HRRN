@@ -1,0 +1,16 @@
+ for(int i=0; i<num;i++)
+        {
+            System.out.println("Enter the arrival time of process "+(i+1)+" ");
+            arrTime[i]=sc.nextInt();
+            System.out.println("Enter the burst time of process "+(i+1)+" ");
+            burstTime[i]=sc.nextInt();
+            pid[i]="P"+(i+1);
+        }
+
+        System.out.println("\nDisplaying process as per user entered values : ");
+        System.out.println("Process \t Arrival Time \t Burst Time");
+        System.out.println("------- \t ------------ \t ----------");
+        for (int i = 0;i < num;i++)
+        {
+            System.out.println(pid[i]+"\t\t\t"+arrTime[i]+"\t\t\t  "+burstTime[i]);
+        }
