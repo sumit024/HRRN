@@ -1,0 +1,19 @@
+System.out.println("\nDisplaying the scheduled processes");
+        System.out.println("\nProcess \t Arrival Time \t Burst Time \t Waiting Time \t Turnaround Time");
+        System.out.println("------- \t ------------ \t ---------- \t ------------ \t ---------------");
+        for (int i = 0;i < num;i++)
+            System.out.println(pid[i]+"\t\t\t"+arrTime[i]+"\t\t\t  "+burstTime[i]+"\t\t\t\t  "+wait[i]+"\t\t\t\t    "+turnAroundTime[i]);
+        int sum_a=0;
+        for(int i=0;i<num;i++)
+        {
+            sum_a=sum_a+wait[i];
+        }
+        avgWait=sum_a/num;
+        int sum_b=0;
+        for(int i=0; i<num;i++)
+        {
+           sum_b=sum_b+turnAroundTime[i];
+        }
+        avgTurnAroundTime=sum_b/num;
+        System.out.println("Average waiting time: "+avgWait);
+        System.out.println("Average turnaround time: "+avgTurnAroundTime);
